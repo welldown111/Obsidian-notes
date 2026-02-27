@@ -5,3 +5,7 @@
 !publish/
 
 !publish/**/*
+
+!.github/
+
+!.github/**/*
