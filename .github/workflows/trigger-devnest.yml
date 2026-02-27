@@ -1,0 +1,21 @@
+name: Trigger devnest rebuild
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch to devnest
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.DEVNEST_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'welldown111',
+              repo: 'devnest',
+              workflow_id: 'deploy.yml',
+              ref: 'main'
+            })
