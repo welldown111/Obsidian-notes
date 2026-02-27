@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+
+!publish/
+
+!publish/**/*
