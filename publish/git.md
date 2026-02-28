@@ -1,28 +1,3 @@
-123
-456
-789
-```
-# 核心配置：让 Git 对文件名使用 UTF-8 编码
-git config --global core.quotepath false
-# 配置 Git 客户端的字符编码为 UTF-8
-git config --global i18n.commit.encoding utf-8
-git config --global i18n.logoutputencoding utf-8
-```
-
-
-- [x] 删除所有文件
-- [x] 修改utf-8
-- [x] 创建pulish
-- [x] 设置gitignore
-- 这个过程本身就是我们正常的项目的流程
-接下来cc这边处理子模块的问题
-
-
-额外了解：
-git回顾，origin,master，各个指令回顾，不同区
-
-
-经验：
 
 utf-8问题，push到远端之后，文件夹名字或者文件名有中文的发现进去404了，解决方法：
 ```
@@ -111,3 +86,4 @@ git push
 # 给本地 new 分支绑定远程 origin/new 分支
 git branch --set-upstream-to=origin/new new
 ```
+
